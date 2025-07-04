@@ -20,7 +20,7 @@ router.post('/', authMiddleware, async (req, res) => {
      console.log('❌ Missing fields in order:', { items, totalAmount, paymentId, orderId });
 
     const newOrder = new Order({
-      user: userId,
+      user: req.userId,
       items,
       totalAmount,
       paymentId,
@@ -38,7 +38,7 @@ router.post('/', authMiddleware, async (req, res) => {
 
 router.get('/', authMiddleware,async (req, res) => {
   try {
-    const orders = await Order.find({ userId: req.userId }).sort({ createdAt: -1 });
+    const orders = await Order.find({ user: req.userId }).sort({ createdAt: -1 });
     res.status(200).json(orders);
   } catch (err) {
     console.error('Failed to fetch orders:', err);
