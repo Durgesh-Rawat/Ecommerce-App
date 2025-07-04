@@ -10,7 +10,12 @@ const authMiddleware = require('./middleware/authmiddleware.js');
 
 const app = express();  
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://ecommerce-app-frontend-ytya.onrender.com',
+  credentials: true
+}));
+
+
 app.use(express.json());
 app.use('/api/payment', paymentRoutes);
 app.use('/api/orders', orderRoutes);
