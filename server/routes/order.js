@@ -20,7 +20,7 @@ router.post('/', authMiddleware, async (req, res) => {
      console.log('❌ Missing fields in order:', { items, totalAmount, paymentId, orderId });
 
     const newOrder = new Order({
-      userId: userId,
+      user: userId,
       items,
       totalAmount,
       paymentId,
