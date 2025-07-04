@@ -26,7 +26,7 @@ function Carts({cartItem, setCartItem}){
  
 
     try {
-      const res = await fetch("http://localhost:5000/cart", {
+      const res = await fetch("https://ecommerce-app-9is1.onrender.com/cart", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
