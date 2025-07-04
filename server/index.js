@@ -145,7 +145,7 @@ app.put('/cart/:id/decrement', authMiddleware, async(req,res) => {
 
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/ecommerce")
+mongoose.connect("mongodb+srv://durgesh:Durgesh%409927@cluster0.6z0anqg.mongodb.net/Ecommerce?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
   console.log("✅ Mongoose is connected");
   app.listen(5000, () => console.log("🚀 Server is running on http://localhost:5000"));
