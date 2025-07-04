@@ -3,7 +3,7 @@
 function AddToCart({product,cartItem,setCartItem }) {
       const token = localStorage.getItem("token");
   // First update the backend
-  fetch('http://localhost:5000/cart', {
+  fetch('https://ecommerce-app-9is1.onrender.com/cart', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
