@@ -1,9 +1,13 @@
 import './logincss.css';
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Logins(){
 
+  const navigate = useNavigate();
+
+  
   const [email, setemail] = useState('');
     const [password,setpassword] = useState('');
   
@@ -21,7 +25,7 @@ function Logins(){
       if (res.ok){
         localStorage.setItem('token',data.token);
         alert('login successful');
-        window.location.href='/carts';
+        navigate('/carts');
       }
       else{
         alert(data.message);
