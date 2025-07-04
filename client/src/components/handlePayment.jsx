@@ -5,7 +5,7 @@ const handlePayment = async ({ amount, cartItem, navigate, setCartItem }) => {
 
   try {
     // Step 1: Create order from backend
-    const order = await axios.post('http://localhost:5000/api/payment/create-order', {
+    const order = await axios.post('https://ecommerce-app-9is1.onrender.com/api/payment/create-order', {
       amount,
     });
 
@@ -20,7 +20,7 @@ const handlePayment = async ({ amount, cartItem, navigate, setCartItem }) => {
       handler: async function (response) {
         // Step 3: Call backend to verify payment
         try {
-          const verifyRes = await axios.post('http://localhost:5000/api/payment/verify', {
+          const verifyRes = await axios.post('https://ecommerce-app-9is1.onrender.com/api/payment/verify', {
             razorpay_order_id: response.razorpay_order_id,
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_signature: response.razorpay_signature
@@ -37,7 +37,7 @@ const handlePayment = async ({ amount, cartItem, navigate, setCartItem }) => {
                 const token = localStorage.getItem('token');
                 console.log("🔐 Sending token to save order:", token);
 
-                const orderRes = await fetch('http://localhost:5000/api/orders',{
+                const orderRes = await fetch('https://ecommerce-app-9is1.onrender.com/api/orders',{
                   method: 'POST',
                   headers: {
                     "Content-Type" : "application/json",
