@@ -25,7 +25,7 @@ useEffect(() => {
     try {
       const token = localStorage.getItem("token"); // 🔐 Get token from localStorage
 
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://ecommerce-app-9is1.onrender.com/api/orders', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
