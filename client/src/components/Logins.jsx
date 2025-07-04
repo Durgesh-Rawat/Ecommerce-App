@@ -1,6 +1,6 @@
 import './logincss.css';
 import React, {useState} from 'react';
-
+import { Link } from 'react-router-dom';
 
 function Logins(){
 
@@ -38,7 +38,7 @@ function Logins(){
        <input type="password" placeholder="Password" required onChange={ (e) => setpassword(e.target.value)} />
        <button type="submit">Login</button>
      </form>
-     <p className="link">Don't have an account? <a href="/signup">Sign up</a></p>
+     <p className="link">Don't have an account? <Link to="/signup">Sign up</Link></p>
   </div>
     );
 }
