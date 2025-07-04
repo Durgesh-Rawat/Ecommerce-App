@@ -10,7 +10,7 @@ function Signup(){
 
     const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const token = localStorage.getItem("token");
     const res = await fetch('https://ecommerce-app-9is1.onrender.com/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json',
