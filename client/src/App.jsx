@@ -3,7 +3,7 @@ import Homes from './components/Homes.jsx';
 import ProductsList from './components/ProductsList.jsx';
 import ProductDetail from './components/ProductDetail.jsx';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'; 
-import Navbar from './components/navbar.jsx';
+import Navbar from './components/Navbar.jsx';
 import Carts from './components/Carts.jsx';
 import Order from './components/Order.jsx';
 import Logins from './components/Logins.jsx';
