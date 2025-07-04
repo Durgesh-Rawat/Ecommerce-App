@@ -10,7 +10,7 @@ function Logins(){
       const handleSubmit = async (e) => {
       e.preventDefault();
   
-      const res = await fetch('http://localhost:5000/api/auth/login', {
+      const res = await fetch('https://ecommerce-app-9is1.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
