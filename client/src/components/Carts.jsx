@@ -59,7 +59,7 @@ function Carts({cartItem, setCartItem}){
 
     const increment = (itemId) => {
       const token = localStorage.getItem("token");
-    fetch(`http://localhost:5000/cart/${itemId}/increment`, {
+    fetch(`https://ecommerce-app-9is1.onrender.com/cart/${itemId}/increment`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json', 
@@ -84,7 +84,7 @@ function Carts({cartItem, setCartItem}){
   
      const token = localStorage.getItem("token");
     
-    fetch(`http://localhost:5000/cart/${itemId}/decrement`,{
+    fetch(`https://ecommerce-app-9is1.onrender.com/cart/${itemId}/decrement`,{
       method: 'PUT',
       headers: {
         "Content-Type": "application/json",
@@ -105,7 +105,7 @@ function Carts({cartItem, setCartItem}){
     const token = localStorage.getItem("token");
 
     // Step 1: Remove from backend
-     fetch(`http://localhost:5000/cart/${itemtoremove._id}`,{
+     fetch(`https://ecommerce-app-9is1.onrender.com/cart/${itemtoremove._id}`,{
       method: 'DELETE',
       headers: {
         "Content-Type": "application/json",
